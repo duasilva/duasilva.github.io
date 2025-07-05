@@ -33,8 +33,6 @@ function updateTheme() {
     icon.textContent = isDark ? "☀️" : "🌙";
 }
 
-// Initial update
 updateTheme();
 
-// Listen for toggle
 checkbox.addEventListener("change", updateTheme);
