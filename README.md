@@ -15,8 +15,8 @@ This is a simple, clean, and responsive personal site built from scratch using H
 ## Tech Stack
 
 -   HTML5
--   CSS3 (no frameworks, pure CSS with CSS variables for theming, these variables could probably be better organized)
--   JavaScript for interactivity (typing animation for the page title and dark mode toggle slider)
+-   CSS3 (pure CSS with variables)
+-   JavaScript (Typing animation for the page title and dark mode toggle slider)
 
 ## Usage
 
