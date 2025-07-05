@@ -2,33 +2,35 @@
 
 Welcome to my profile page!
 
-This is a simple, clean, and responsive page that I've built from scratch using HTML and CSS. It showcases my social media profiles, projects, and a little about me.
+This is a simple, clean, and responsive personal site built from scratch using HTML, CSS, and a bit of JavaScript. It showcases my social media profiles, projects, a brief about me section, and includes a dark mode toggle for better usability.
 
 ## Features
 
--   Accessibility features (I had no idea how many accessibility options there were, pretty cool!)
--   Custom styling with JetBrains Mono font
--   Responsive layout with centered content
--   Links to my socials and projects
+-   Accessibility features, which I had no idea existed, but are pretty cool
+-   Responsive layout with centered content that adapts to mobile and desktop
+-   Dark mode toggle with smooth transitions
+-   Background topography pattern with subtle opacity
+-   Sections for About Me, Where to Find Me, Projects, and Contact
 
-## Tech
+## Tech Stack
 
 -   HTML5
--   CSS3 (no frameworks, just pure CSS)
+-   CSS3 (no frameworks, pure CSS with CSS variables for theming, these variables could probably be better organized)
+-   JavaScript for interactivity (typing animation for the page title and dark mode toggle slider)
 
 ## Usage
 
-Feel free to browse the source code and use it.
+Feel free to explore the source code or fork it for your own use.
 
-You can view it live at: [https://duasilva.github.io/](https://duasilva.github.io/)
+Live at: [https://duasilva.github.io/](https://duasilva.github.io/)
 
 ## Contributing
 
-This is a personal project. I don't really expect anyone to contribute, but I'm open to feedback, after all I'm just a beginner and have much to learn.
+This is a personal project. While I don’t expect contributions, I’m open to feedback and suggestions as I continue learning and improving.
 
 ## License
 
-This project is currently unlicensed but may be released under the MIT License in the future if I ever make it into something decent that people might want to use.
+Currently unlicensed. May be released under the MIT License if it evolves into something others find useful.
 
 ---
 
