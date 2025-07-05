@@ -1,9 +1,80 @@
+/* Light and Dark Mode */
+:root {
+    --bg-color: #d4dfff;
+    --text-color: #111;
+    --link-bg: #4b4ef1;
+    --link-bg-hover: #3629b7;
+    --link-text: #eee;
+    --footer-bg: rgba(255, 255, 255, 0.5);
+    --about-bg: rgba(255, 255, 255, 0.4);
+    --hr-color: rgba(75, 78, 241, 0.2);
+    --bg-opacity: opacity: 0.05;
+    --toggle-bg: rgba(255, 255, 255, 0.5);
+}
+
+body.dark-mode {
+    --bg-color: #121212;
+    --text-color: #eee;
+    --link-bg: #ffc547;
+    --link-bg-hover: #d3841d;
+    --link-text: #111;
+    --footer-bg: rgba(255, 255, 255, 0.1);
+    --about-bg: rgba(255, 255, 255, 0.2);
+    --hr-color: rgba(255, 197, 71, 0.2);
+    --bg-opacity: opacity: 1;
+    --toggle-bg: rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .bg-pattern {
+    filter: invert(1);
+}
+
+/* Mobile Optimization */
+@media (max-width: 768px) {
+  .container.about {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  footer,
+  .about p {
+    backdrop-filter: none !important;
+  }
+}
+
+
+/* Misc */
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 /* Page Body */
 body {
     text-align: center;
     font-family: "JetBrains Mono", sans-serif;
-    background-color: #e8e8f5;
-    color: #111;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Background Pattern */
+.bg-pattern {
+    position: fixed;
+    inset: 0;
+    background-image: url("../img/background.svg");
+    background-repeat: repeat;
+    opacity: 0.05;
+    z-index: -1;
+    pointer-events: none;
+    will-change: transform, opacity;
 }
 
 /* Links Container*/
@@ -16,30 +87,33 @@ body {
     max-width: 300px;
     padding: 0.5rem 1rem;
     margin: 1rem auto;
-    background-color: #914bf1;
+    background-color: var(--link-bg);
     border-radius: 6px;
     text-decoration: none;
-    color: #fff;
+    color: var(--link-text);
     font-weight: bold;
     transition: filter 0.3s ease;
 }
 
 .container a:hover {
     filter: brightness(0.8);
+    outline: 3px solid var(--link-bg);
+    outline-offset: 2px;
 }
 
 .container a:focus {
-    outline: 3px solid #914bf1;
+    outline: 3px solid var(--link-bg);
     outline-offset: 2px;
 }
 
 .container + .container {
-    margin-top: 2rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
 }
 
 .container h3 {
     font-style: italic;
-    letter-spacing: 4px;
+    letter-spacing: 2px;
     text-transform: lowercase;
 }
 
@@ -49,11 +123,13 @@ img {
     width: 180px;
     height: 180px;
     object-fit: cover;
+    outline: 4px solid var(--link-bg);
+    outline-offset: 4px;
 }
 
 /* Header */
 header {
-    margin: 50px 0 50px 0;
+    margin: 50px 0 0 0;
 }
 
 header h1 {
@@ -71,12 +147,14 @@ header h2 {
 
 /* Footer */
 footer {
-    margin-top: 6rem;
+    margin-top: auto;
     padding: 1rem 0;
     text-align: center;
-    color: #666;
-    border-top: 1px solid #ccc;
-    font-weight: 300;
+    color: var(--text-color);
+    background-color: var(--footer-bg);
+    backdrop-filter: blur(1px);
+    width: 100%;
+    box-sizing: border-box;
 }
 
 footer p {
@@ -84,3 +162,101 @@ footer p {
     font-size: 0.8rem;
     margin: 0;
 }
+
+/* About Me */
+.about p {
+    max-width: 600px;
+    margin: 1rem auto;
+    padding: 1rem;
+    line-height: 1.6;
+    background-color: var(--about-bg);
+    backdrop-filter: blur(2px);
+    border-radius: 8px;
+    font-weight: 400;
+}
+
+.about h3 {
+    margin-top: 2rem;
+    font-style: italic;
+    letter-spacing: 4px;
+    text-transform: lowercase;
+}
+
+/* Override styling for links to avoid buttons, ugly code, but works */
+.container.about a {
+    all: unset;
+    color: var(--link-bg);
+    text-decoration: underline;
+    cursor: pointer;
+    font-weight: normal;
+    transition: color 0.3s ease;
+}
+
+.container.about a:hover,
+.container.about a:focus {
+    color: var(--link-bg-hover);
+    outline: none;
+    text-decoration: underline;
+}
+
+
+/* Horizontal Line */
+
+hr {
+    border: none;
+    height: 2px;
+    max-width: 300px;
+    margin: 2.5rem auto;
+    background: repeating-linear-gradient(
+        to right,
+        var(--hr-color),
+        var(--hr-color) 5px,
+        transparent 5px,
+        transparent 10px
+    );
+    border-radius: 2px;
+}
+
+/* Dark Mode Toggle Slider */
+.toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  width: 50px;
+  height: 28px;
+  display: inline-block;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.toggle input {
+  display: none;
+}
+
+.slider {
+  position: relative;
+  background-color: var(--toggle-bg);
+  border-radius: 999px;
+  height: 100%;
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+  padding: 0 4px;
+}
+
+.icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s ease;
+  font-size: 1rem;
+}
+
+.slider .icon {
+  transform: translateX(0);
+}
+
+.toggle input:checked + .slider .icon {
+  transform: translateX(22px);
+}
+

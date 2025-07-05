@@ -5,35 +5,64 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>&lt;/Duarte Silva&gt; - Aspiring Developer</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="css/style.css" type="text/css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800" rel="stylesheet">
 </head>
 
 <body>
+  <div class="bg-pattern"></div>
   <header><img title="Duarte Silva" alt="Duarte Silva's Avatar" src="img/avatar.png" />
-    <h1>&lt;/Duarte Silva&gt;</h1>
-    <h2>Aspiring developer from Azores, Portugal</h2>
-  </header>
+    <h1 id="typing-anim">&lt;/Duarte Silva&gt;</h1>
+    <!-- <button id="dark-mode-toggle" aria-label="Toggle dark mode">🌙</button> -->
+    <label class="toggle">
+      <input type="checkbox" id="dark-mode-checkbox" aria-label="Toggle dark mode" />
+      <span class="slider">
+        <span class="icon">🌙</span>
+      </span>
+    </label>
 
-  <div class="container">
-    <h3>&lt;/Where to Find Me&gt;</h3>
-    <a href="https://www.github.com/duasilva" target="_blank" rel="noopener noreferrer">GitHub</a>
-    <a href="https://x.com/duartengsilva" target="_blank" rel="noopener noreferrer">Twitter</a>
-    <a href="https://instagram.com/duartengsilva" target="_blank" rel="noopener noreferrer">Instagram</a>
-    <a href="https://bsky.app/profile/duartesilva.bsky.social" target="_blank" rel="noopener noreferrer">Bluesky</a>
-    <a href="https://www.threads.com/@duartengsilva" target="_blank" rel="noopener noreferrer">Threads</a>
-  </div>
-  <div class="container">
-    <h3>&lt;/Projects&gt;</h3>
-    <a href="https://duasilva.github.io/gta-vi-countdown" target="_blank" rel="noopener noreferrer">GTA VI Countdown</a>
-  </div>
+
+  </header>
+  <main>
+    <section class="container about">
+      <h3>&lt;/About Me&gt;</h3>
+      <p>
+        I’m an aspiring full-stack developer currently exploring HTML, CSS, and JavaScript. I love coding, books and
+        video games. Based in <em>Azores, Portugal</em> 🌊
+      </p>
+      <p>🎧 Listening to: <a href="https://open.spotify.com/playlist/3DIjw8eboATMgRN2RC6mz6?si=wHNwek5gSwKI-w-eDdQorQ"
+          target="_blank" rel="noopener noreferrer" title="lofi beats playlist"><em>lofi
+            beats</em></a></p>
+      <p>📖 Reading: <em>Without Remorse by Tom Clancy</em></p>
+    </section>
+    <hr />
+    <section class="container">
+      <h3>&lt;/Where to Find Me&gt;</h3>
+      <a href="https://www.github.com/duasilva" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://x.com/duartengsilva" target="_blank" rel="noopener noreferrer">Twitter</a>
+      <a href="https://instagram.com/duartengsilva" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <a href="https://bsky.app/profile/duartesilva.bsky.social" target="_blank" rel="noopener noreferrer">Bluesky</a>
+      <a href="https://www.threads.com/@duartengsilva" target="_blank" rel="noopener noreferrer">Threads</a>
+    </section>
+    <hr />
+    <section class="container">
+      <h3>&lt;/Projects&gt;</h3>
+      <a href="https://duasilva.github.io/gta-vi-countdown" target="_blank" rel="noopener noreferrer">GTA VI
+        Countdown</a>
+    </section>
+    <hr />
+    <section class="container about">
+      <h3>&lt;/Contact&gt;</h3>
+      <p>✉️ Email me at: <a href="mailto:heyduartesilva@gmail.com">heyduartesilva@gmail.com</a></p>
+    </section>
+  </main>
   <footer>
-    <p>Made with ❤️ by Duarte Silva</p>
+    <p>Made with ❤️ by <strong>Duarte Silva</strong></p>
   </footer>
+  <script src="js/script.js"></script>
 </body>
 
 </html>
