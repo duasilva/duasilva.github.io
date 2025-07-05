@@ -1,8 +1,6 @@
 # Duarte Silva's Profile Page
 
-Welcome to my profile page!
-
-This is a simple, clean, and responsive personal site built from scratch using HTML, CSS, and a bit of JavaScript. It showcases my social media profiles, projects, a brief about me section, and includes a dark mode toggle for better usability.
+This is as simple, clean, and responsive personal site built from scratch using HTML, CSS, and a little big of JavaScript. It has links to my social media profiles, projects, and a brief description about me. It also has a dark/light toggle button for better usability.
 
 ## Features
 
@@ -10,12 +8,12 @@ This is a simple, clean, and responsive personal site built from scratch using H
 -   Responsive layout with centered content that adapts to mobile and desktop
 -   Dark mode toggle with smooth transitions
 -   Background topography pattern with subtle opacity
--   Sections for About Me, Where to Find Me, Projects, and Contact
+-   Sections for About, Where to Find Me, Projects, and Contact
 
 ## Tech Stack
 
 -   HTML5
--   CSS3 (pure CSS with variables)
+-   CSS3 (Pure CSS with variables for theming both dark and light mode)
 -   JavaScript (Typing animation for the page title and dark mode toggle slider)
 
 ## Usage
