@@ -114,7 +114,7 @@ body {
 .container h3 {
     font-style: italic;
     letter-spacing: 2px;
-    text-transform: lowercase;
+    text-transform: uppercase;
 }
 
 /* Profile Picture */
@@ -136,7 +136,7 @@ header h1 {
     font-weight: 600;
     letter-spacing: 4px;
     font-style: italic;
-    text-transform: lowercase;
+    text-transform: uppercase;
 }
 
 header h2 {
@@ -165,21 +165,14 @@ footer p {
 
 /* About Me */
 .about p {
-    max-width: 600px;
+    max-width: 500px;
     margin: 1rem auto;
     padding: 1rem;
-    line-height: 1.6;
+    line-height: 1.5;
     background-color: var(--about-bg);
     backdrop-filter: blur(2px);
     border-radius: 8px;
     font-weight: 400;
-}
-
-.about h3 {
-    margin-top: 2rem;
-    font-style: italic;
-    letter-spacing: 4px;
-    text-transform: lowercase;
 }
 
 /* Override styling for links to avoid buttons, ugly code, but works */
@@ -197,24 +190,6 @@ footer p {
     color: var(--link-bg-hover);
     outline: none;
     text-decoration: underline;
-}
-
-
-/* Horizontal Line */
-
-hr {
-    border: none;
-    height: 2px;
-    max-width: 300px;
-    margin: 2.5rem auto;
-    background: repeating-linear-gradient(
-        to right,
-        var(--hr-color),
-        var(--hr-color) 5px,
-        transparent 5px,
-        transparent 10px
-    );
-    border-radius: 2px;
 }
 
 /* Dark Mode Toggle Slider */
